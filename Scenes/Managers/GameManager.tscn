@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://43xljbfcnj2d"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Managers/GameManager.cs" id="1_ui40t"]
+[ext_resource type="JSON" path="res://Assets/Data/Levels.json" id="2_uvx62"]
+[ext_resource type="JSON" path="res://Assets/Data/Contents.json" id="3_jubka"]
+[ext_resource type="JSON" path="res://Assets/Data/SocialText.json" id="4_uw48d"]
+[ext_resource type="JSON" path="res://Assets/Data/SpriteInfo.json" id="5_t7se5"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_ui40t")
+levelJSON = ExtResource("2_uvx62")
+contentsJSON = ExtResource("3_jubka")
+socialJSON = ExtResource("4_uw48d")
+spriteJSON = ExtResource("5_t7se5")

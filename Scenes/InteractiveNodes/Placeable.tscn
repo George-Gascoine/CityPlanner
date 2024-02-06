@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4ljjuadcij8g"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Nodes/Placeable.cs" id="1_i4xdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5chrp"]
+
+[node name="Placeable" type="Node2D"]
+script = ExtResource("1_i4xdw")
+
+[node name="PlaceableSprite" type="Sprite2D" parent="."]
+centered = false
+region_enabled = true
+
+[node name="PlaceableArea" type="Area2D" parent="."]
+
+[node name="PlaceableCollision" type="CollisionShape2D" parent="PlaceableArea"]
+shape = SubResource("RectangleShape2D_5chrp")

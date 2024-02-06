@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3lowyudojpoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw56k"]
+
+[node name="Cleanable" type="Node2D"]
+
+[node name="CleanableSprite" type="Sprite2D" parent="."]
+
+[node name="CleanableArea" type="Area2D" parent="CleanableSprite"]
+
+[node name="CleanableCollision" type="CollisionShape2D" parent="CleanableSprite/CleanableArea"]
+shape = SubResource("RectangleShape2D_pw56k")

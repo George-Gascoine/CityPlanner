@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnway882fgn1n"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/UI/LevelUI.cs" id="1_ynjbi"]
+[ext_resource type="Theme" uid="uid://cb7n5lgv62soo" path="res://Assets/Themes/UITheme.tres" id="2_w5lvy"]
+[ext_resource type="Texture2D" uid="uid://drhscxgm3lyr4" path="res://Assets/Sprites/UI/PlaceIcon.png" id="3_cbigj"]
+[ext_resource type="PackedScene" uid="uid://bnr7h5ynumo8g" path="res://Scenes/UI/ContentsContainer.tscn" id="3_np6rr"]
+[ext_resource type="Texture2D" uid="uid://hjp2rlbkt5sp" path="res://Assets/Sprites/UI/SpannerIcon.png" id="4_5qx6a"]
+[ext_resource type="Texture2D" uid="uid://d2tgycbgv55wx" path="res://Assets/Sprites/UI/CleanIcon.png" id="5_bvmwx"]
+[ext_resource type="Texture2D" uid="uid://baucom8mrytmh" path="res://Assets/Sprites/UI/RubbishIcon.png" id="6_q87cj"]
+[ext_resource type="Texture2D" uid="uid://dtg62bbxp6y7f" path="res://Assets/Sprites/UI/PhotoIcon.png" id="7_gwdeu"]
+
+[node name="LevelUI" type="CanvasLayer"]
+script = ExtResource("1_ynjbi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(325, 181)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="StateContainer" type="VBoxContainer" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -70.0
+offset_right = -46.0
+offset_bottom = 70.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_w5lvy")
+
+[node name="Place" type="Button" parent="StateContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = " "
+icon = ExtResource("3_cbigj")
+icon_alignment = 1
+
+[node name="Spanner" type="Button" parent="StateContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("4_5qx6a")
+icon_alignment = 1
+
+[node name="Clean" type="Button" parent="StateContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("5_bvmwx")
+icon_alignment = 1
+
+[node name="Rubbish" type="Button" parent="StateContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("6_q87cj")
+icon_alignment = 1
+
+[node name="Photo" type="Button" parent="StateContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("7_gwdeu")
+icon_alignment = 1
+
+[node name="Contents" type="TabContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -72.0
+offset_right = 150.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+all_tabs_in_front = true
+
+[node name="ContentsContainer" parent="Contents" instance=ExtResource("3_np6rr")]
+layout_mode = 2

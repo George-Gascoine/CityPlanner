@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgo4x6n6gcibo"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Managers/LevelManager.cs" id="1_0hsr4"]
+[ext_resource type="Texture2D" uid="uid://bq5fc6eard8hs" path="res://Assets/Sprites/Contents/MainAreas/Street.png" id="2_8kolh"]
+[ext_resource type="PackedScene" uid="uid://bnway882fgn1n" path="res://Scenes/UI/LevelUI.tscn" id="2_640ov"]
+
+[sub_resource type="TileSet" id="TileSet_3lj1y"]
+tile_shape = 1
+tile_size = Vector2i(32, 16)
+
+[node name="Street" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_0hsr4")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_3lj1y")
+format = 2
+layer_0/name = "Floor"
+layer_0/y_sort_enabled = true
+layer_1/name = "Layer One"
+layer_1/y_sort_enabled = true
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()
+
+[node name="LevelUI" parent="." instance=ExtResource("2_640ov")]
+
+[node name="MainArea" type="Node2D" parent="."]
+
+[node name="AreaSprite" type="Sprite2D" parent="MainArea"]
+position = Vector2(320, 180)
+texture = ExtResource("2_8kolh")

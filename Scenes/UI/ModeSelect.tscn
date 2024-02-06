@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://qi6blrp0qiqx"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/UI/ModeSelect.cs" id="1_xbpmb"]
+[ext_resource type="Theme" uid="uid://cb7n5lgv62soo" path="res://Assets/Themes/UITheme.tres" id="2_nlgf2"]
+
+[node name="ModeSelect" type="CanvasLayer"]
+script = ExtResource("1_xbpmb")
+
+[node name="ModeContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -110.0
+offset_right = 200.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nlgf2")
+theme_override_constants/separation = 20
+
+[node name="ModeRowOne" type="HBoxContainer" parent="ModeContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BasicModeButton" type="Button" parent="ModeContainer/ModeRowOne"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "       Street"
+alignment = 0
+
+[node name="Button2" type="Button" parent="ModeContainer/ModeRowOne"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="ModeContainer/ModeRowOne"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="ModeRowTwo" type="HBoxContainer" parent="ModeContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="ModeContainer/ModeRowTwo"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="ModeContainer/ModeRowTwo"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="ModeContainer/ModeRowTwo"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="ModeContainer/ModeRowOne/BasicModeButton" to="." method="StartBasicMode"]

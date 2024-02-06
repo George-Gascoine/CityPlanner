@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bx2c1u52j7wft"]
+
+[node name="SocialPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="SocialSprite" type="Sprite2D" parent="."]
+
+[node name="SocialText" type="Label" parent="SocialSprite"]
+offset_right = 40.0
+offset_bottom = 23.0

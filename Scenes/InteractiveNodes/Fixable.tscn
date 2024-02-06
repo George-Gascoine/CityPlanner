@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dipbjf8wq03j1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvn5y"]
+
+[node name="Fixable" type="Node2D"]
+
+[node name="FixableSprite" type="Sprite2D" parent="."]
+
+[node name="FixableArea" type="Area2D" parent="FixableSprite"]
+
+[node name="FixableCollision" type="CollisionShape2D" parent="FixableSprite/FixableArea"]
+shape = SubResource("RectangleShape2D_bvn5y")
